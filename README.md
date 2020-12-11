@@ -1,5 +1,5 @@
 # manual-bonus
-Requires all 4 files to execute
+Requires all 4 files in repository to execute
 
 Also requires the requests library, to install run $ python -m pip install requests
 
@@ -15,7 +15,7 @@ Add the correct Jira ticket ID to ticket_id property also in emirates.py
 
 When script is done running, a CSV file will be created with the following headers: ticket, offer, parent_order, order_url, parent_order_amount, bonus_amount, credit_status, order_status, pts_app_cid
 
-Every request executed as part of the same manual bonus event will have a single unique Pts-App-CID for easy Splunking
+Every request executed as part of the same manual bonus order will have a single unique Pts-App-CID for easy Splunking
 
 All Pts-App-CID's will end with "Emirates Manual Bonus"
 
