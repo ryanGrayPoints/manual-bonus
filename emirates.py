@@ -2,7 +2,7 @@
 import csv
 from manual_bonus import *
 
-cid_prefix = "Emirates_Manual_Bonus"
+cid_suffix = "Emirates_Manual_Bonus"
 ticket_id = ""
 
 reader = csv.DictReader(open('emirates.csv', encoding="utf-8-sig"))
@@ -12,7 +12,7 @@ for line in reader:
 
 logs = []
 for x in dict_list:
-    cid = generate_cid(cid_prefix)
+    cid = generate_cid(cid_suffix)
     ticket = "https://jira.points.com/browse/" + ticket_id
     mb = manual_bonus(x["parent_order"], x["offer"], ticket, cid)
     logs.append(mb)
