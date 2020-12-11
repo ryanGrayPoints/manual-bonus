@@ -15,7 +15,7 @@ Add the correct Jira ticket ID to ticket_id property also in emirates.py
 
 When script is done running, a CSV file will be created with the following headers: ticket, offer, parent_order, order_url, parent_order_amount, bonus_amount, credit_status, order_status, pts_app_cid
 
-Every record, regardless of status, will be included in its own row withint the CSV file
+Every record, regardless of status, will be included in its own row within the CSV file
 
 Every request executed as part of the same manual bonus order will have a single unique Pts-App-CID for easy Splunking
 
