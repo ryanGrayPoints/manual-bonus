@@ -120,7 +120,7 @@ def link_order_to_mv(mv_url: str, order_url: str, cid: str):
 
 
 ########################################################################################################################
-def create_credit(mv_url: str, amount: int, pic: None, cid: str):
+def create_credit(mv_url: str, amount: int, cid: str, pic=None):
     print("--------------- CREATING CREDIT ---------------")
     url = mv_url[:-41] + '/credits/'
     req_body = {
@@ -129,7 +129,7 @@ def create_credit(mv_url: str, amount: int, pic: None, cid: str):
         "creditType": "bonus"
     }
     if pic:
-        req_body["pic"]: pic
+        req_body["pic"] = pic
     rsp = lcp_request(app_mac_key_id, app_mac_key, 'POST', url, req_body, cid=cid, print_rsp=True)
     return rsp
 
@@ -182,7 +182,7 @@ def manual_bonus(parent_order_url: str, offer_url: str, ticket: str, cid: str):
                 if order.get("status"):
                     log["order_url"] = order["links"]["self"]["href"]
                     link_order_to_mv(mv_url, log["order_url"], cid)
-                    credit = create_credit(mv_url, bonus_info["amount"], bonus_info["pic"], cid)
+                    credit = create_credit(mv_url, bonus_info["amount"], cid, bonus_info["pic"])
 
                     if credit.get("status"):
                         log["credit_status"] = credit.get("status")
