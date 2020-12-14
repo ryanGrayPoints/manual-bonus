@@ -47,7 +47,8 @@ def create_mv(base_info: dict, cid: str):
     url = base_info["lp"] + '/mvs/'
     req_body = {
         "identifyingFactors": {
-            "memberId": base_info["member_id"]
+            "memberId": base_info["member_id"],
+            "lastName": base_info["last_name"]
         }
     }
     mv = lcp_request(app_mac_key_id, app_mac_key, 'POST', url, req_body, cid=cid, print_rsp=True)
