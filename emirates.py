@@ -4,8 +4,9 @@ from manual_bonus import *
 
 cid_suffix = "Emirates_Manual_Bonus"
 ticket_id = ""
+file_name = ""
 
-reader = csv.DictReader(open('emirates.csv', encoding="utf-8-sig"))
+reader = csv.DictReader(open(file_name, encoding="utf-8-sig"))
 dict_list = []
 for line in reader:
     dict_list.append(line)
