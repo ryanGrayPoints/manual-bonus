@@ -1,6 +1,9 @@
 
 import csv
-from manual_bonus import *
+
+# import ONE of the *_manual_bonus below:
+# from emirates_manual_bonus import * 
+# from qatar_manual_bonus import *
 
 cid_suffix = "<user input>"
 ticket_id = "<user input>"
