@@ -2,9 +2,9 @@
 import csv
 from manual_bonus import *
 
-cid_suffix = "Emirates_Manual_Bonus"
-ticket_id = ""
-file_name = ""
+cid_suffix = "<user input>"
+ticket_id = "<user input>"
+file_name = "<user input>"
 
 reader = csv.DictReader(open(file_name, encoding="utf-8-sig"))
 dict_list = []
