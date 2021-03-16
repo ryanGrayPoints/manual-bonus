@@ -1,5 +1,5 @@
-from manual_bonus_lcp_requests import *
-from manual_bonus_lcp_credentials import *
+from lcp_requests import *
+from lcp_credentials import *
 ########################################################################################################################
 def get_base_info(parent_order_url: str, cid: str):
     print("-------------- GETTING PARENT ORDER --------------")
